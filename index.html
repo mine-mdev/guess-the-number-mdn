@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" prefix="og: https://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guess the number est un jeu simple qui consiste à deviner un nombre." />
+    <meta property="og:title" content="Guess the number" />
+    <meta property="og:description" content="Guess the number est un jeu simple qui consiste à deviner un nombre." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mine-mdev.github.io/guess-the-number-mdn/" />
+    <meta property="og:image" content="images/game2.png" />
     <title>Guess the number</title>
     <link rel="stylesheet" href="css/output.css">
     <script src="js/gsap.min.js" defer></script>
@@ -28,7 +34,7 @@
     <main class="flex w-full justify-center text-primaire ">
         <div class="w-full lg:w-1/2 mt-8 px-8 lg:px-0">
             <div class="zoneDeSaisie w-full">
-                <label for="proposition">Votre proposition</label>
+                <label for="proposition">Votre proposition:</label>
                 <br>
                 <input type="text" id="proposition"
                     class="transition ease-out duration-500 focus:ring-2 focus:ring-primaire mt-4">
