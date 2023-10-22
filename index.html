@@ -5,26 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the number</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/output.css">
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/animation.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 
-<body>
-    <header>
-        <h1> Jeu: Guess the number</h1>
-    </header>
-    <main>
-        <p>Nous avons generé un nombre aléatoir entre 1 et 100, tentez de le deviner en 10 tours maximum.</p>
-        <p>Pour chaque tentative, nous vous dirons si votre estimation est trop ou assez élevée.</p>
-        <div>
-            <label for="proposition">Entrez votre proposition</label>
-            <input type="text" id="proposition">
-            <button>Valider</button>
+<body class="bg-secondaire h-screen w-screen">
+    <header class=" relative h-1/2 w-full bg-primaire text-secondaire flex justify-center items-center">
+        <div class="text-center px-8 lg:px-0">
+            <h1 class="font-poppins  text-titre_mobile lg:text-titre font-semibold "> Jeu: Guess the number</h1>
+            <div class="font-nunito lg:text-texte font-extralight mt-4">
+                <p>Nous avons generé un nombre aléatoire entre 1 et 100, tentez de le deviner en 10 tours maximum.</p>
+                <p class="mt-4 lg:mt-0">Pour chaque tentative, nous vous dirons si votre estimation est trop ou assez
+                    élevée.
+                </p>
+            </div>
         </div>
-        <div>
-            <p id="nombres"></p>
-            <p id="resultat"></p>
-            <p id="plusOuMoins"></p>
+        <img src="images/game1.png" alt="game1" class="absolute w-20 lg:w-44 bottom-2 left-2">
+        <img src="images/game2.png" alt="game2" class="absolute w-20 lg:w-44 top-2 right-2">
+    </header>
+    <main class="flex w-full justify-center text-primaire ">
+        <div class="w-full lg:w-1/2 mt-8 px-8 lg:px-0">
+            <div class="zoneDeSaisie w-full">
+                <label for="proposition">Votre proposition</label>
+                <br>
+                <input type="text" id="proposition"
+                    class="transition ease-out duration-500 focus:ring-2 focus:ring-primaire mt-4">
+                <br>
+                <button class="mt-4 active">Valider</button>
+            </div>
+            <div>
+                <p id="nombres" class="mt-2"></p>
+                <p id="resultat" class="mt-2"></p>
+                <p id="plusOuMoins" class="mt-2"></p>
+            </div>
         </div>
     </main>
     <footer></footer>
