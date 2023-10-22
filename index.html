@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1> Jeu: Guess the number</h1>
+    </header>
+    <main>
+        <p>Nous avons generé un nombre aléatoir entre 1 et 100, tentez de le deviner en 10 tours maximum.</p>
+        <p>Pour chaque tentative, nous vous dirons si votre estimation est trop ou assez élevée.</p>
+        <div>
+            <label for="proposition">Entrez votre proposition</label>
+            <input type="text" id="proposition">
+            <button>Valider</button>
+        </div>
+        <div>
+            <p id="nombres"></p>
+            <p id="resultat"></p>
+            <p id="plusOuMoins"></p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
